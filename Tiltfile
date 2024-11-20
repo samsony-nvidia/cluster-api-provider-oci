@@ -41,8 +41,10 @@ if "default_registry" in settings:
 
 tilt_helper_dockerfile_header = """
 # Tilt image
-FROM golang:1.19 as tilt-helper
+#FROM golang:1.19 as tilt-helper
+FROM golang:latest as tilt-helper
 # Support live reloading with Tilt
+RUN 
 RUN go install github.com/go-delve/delve/cmd/dlv@latest
 RUN wget --output-document /restart.sh --quiet https://raw.githubusercontent.com/tilt-dev/rerun-process-wrapper/master/restart.sh  && \
     wget --output-document /start.sh --quiet https://raw.githubusercontent.com/tilt-dev/rerun-process-wrapper/master/start.sh && \
@@ -192,7 +194,7 @@ def read_file_from_path(path_to_read):
     return str(str_blob)
 
 def base64_decode(to_decode):
-    decode_blob = local("echo '{}' | base64 --decode -".format(to_decode), quiet = True, echo_off = True)
+    decode_blob = local("echo '{}' | base64 --decode -i -".format(to_decode), quiet = True, echo_off = True)
     return str(decode_blob)
 
 def kustomizesub(folder):

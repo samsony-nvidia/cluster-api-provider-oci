@@ -1,8 +1,9 @@
 {
-
-  "extra_args": {
-    "default_registry": "localhost:5000/cluster-api-oci-controller-amd64:dev",
-    "provider_repos": ["../cluster-api-provider-oci"],
-    "enable_providers": ["aws", "docker", "kubeadm-bootstrap", "kubeadm-control-plane"]
+  "kustomize_substitutions": {
+      "OCI_TENANCY_ID_B64": "b2NpZDEudGVuYW5jeS5vYzEuLmFhYWFhYWFhNXQ3aWZ1M3JzZmNwZGJwdzVuenRzdHZqbHB5N2hoMmNkNnZlYzRucHZmczY2dWI1bDRhYQ==",
+      "OCI_CREDENTIALS_FINGERPRINT_B64": "ZjY6NDM6MjI6YmQ6MTg6MTY6Mjg6OTk6MmU6ZmQ6ZTk6MTE6MWE6Mzg6OTY6ZGU=",
+      "OCI_USER_ID_B64": "b2NpZDEudXNlci5vYzEuLmFhYWFhYWFhMmtwcWl6eXlzeGpzNGM2bXdkZWFraW82NnBlNDJsa3o0aDVzaGRxeTZsbW1rbW5jYmhsYQ==",
+      "OCI_REGION_B64": "dXMtc2Fuam9zZS0x",
+      "OCI_CREDENTIALS_KEY_B64": ""
   }
 }

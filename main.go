@@ -31,6 +31,9 @@ import (
 	expcontrollers "github.com/oracle/cluster-api-provider-oci/exp/controllers"
 	"github.com/oracle/cluster-api-provider-oci/feature"
 	"github.com/oracle/cluster-api-provider-oci/version"
+
+	//"github.com/oracle/oci-go-sdk/v65/common"
+	//common "sdk/common"
 	"github.com/oracle/oci-go-sdk/v65/common"
 	"github.com/spf13/pflag"
 	"k8s.io/apimachinery/pkg/runtime"

@@ -185,7 +185,7 @@ func (c *ClientProvider) createClients(region string) (OCIClients, error) {
 func (c *ClientProvider) createVcnClient(region string, ociAuthConfigProvider common.ConfigurationProvider, logger *logr.Logger) (*core.VirtualNetworkClient, error) {
 	vcnClient, err := core.NewVirtualNetworkClientWithConfigurationProvider(ociAuthConfigProvider)
 	if err != nil {
-		logger.Error(err, "unable to create OCI VCN Client")
+		logger.Error(err, "kilroy was here. unable to create OCI VCN Client")
 		return nil, err
 	}
 	vcnClient.SetRegion(region)
